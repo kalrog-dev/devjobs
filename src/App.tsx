@@ -1,7 +1,9 @@
+import { Button } from './components'
+
 const App = () => {
 
   return (
-    <p>Test App</p>
+    <Button template='light' title='Button' />
   )
 }
 
