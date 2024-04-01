@@ -8,13 +8,15 @@ import { Props } from '.'
 const LIGHT_ACCENT_COLOR = 'violet'
 const DARK_ACCENT_COLOR = 'white'
 
-export const StyledButton = styled.a<
+export const StyledButton = styled.button<
   Pick<Props, 'template'>
 >`
   display: inline-block;
+  font-family: inherit;
   font-size: ${theme.fontSizes.md};
   font-weight: ${theme.fontWeights.bold};
   line-height: ${theme.lineHeights.md};
+  border: none;
   border-radius: ${theme.radius.md};
   padding: ${rem(16)} ${rem(40)};
   cursor: pointer;
