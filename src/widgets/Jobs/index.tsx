@@ -1,11 +1,12 @@
+import { Container } from '../../components'
+import { IconNameType } from '../../components/Icon'
 import { Job } from './components'
 import { StyledJobs } from './styled'
 
-type JobType = {
+export type JobType = {
   id: number
   company: string
-  logo: string
-  logoBackground: string
+  logo: IconNameType
   position: string
   postedAt: string
   contract: string
@@ -31,13 +32,15 @@ const Jobs: React.FC<Props> = ({ data }) => {
   if (!data) return null
   
   return (
-    <StyledJobs>
-      {data.map(job => {
-        return (
-          <Job key={job.id} job={job} />
-        )
-      })}
-    </StyledJobs>
+    <Container>
+      <StyledJobs>
+        {data.map((job) => {
+          return (
+            <Job key={job.id} job={job} />
+          )
+        })}
+      </StyledJobs>
+    </Container>
   )
 }
 

@@ -1,15 +1,13 @@
-import { Button } from './components'
-import { Jobs } from './widgets'
+import { Header, Jobs } from './widgets'
 import data from './data/data.json'
+import { JobType } from './widgets/Jobs'
 
 const App = () => {
 
   return (
     <>
-      <Button template='primary' title='Button' />
-      <Button template='light' title='Button' />
-      <Button template='dark' title='Button' />
-      <Jobs data={data} />
+      <Header />
+      <Jobs data={data as JobType[]}/>
     </>
   )
 }

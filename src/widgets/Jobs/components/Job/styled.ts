@@ -1,8 +1,11 @@
 import styled from 'styled-components'
-import { theme } from '../../../../theme/theme'
 import { rem, size } from 'polished'
 
+import { Icon } from '../../../../components'
+import { theme } from '../../../../theme/theme'
+
 export const StyledJob = styled.article`
+  position: relative;
   background-color: ${theme.colors.white};
   border-radius: ${theme.radius.lg};
   padding: ${rem(50)} ${rem(32)} ${rem(36)};
@@ -51,3 +54,5 @@ export const StyledLocation = styled.p`
   font-weight: ${theme.fontWeights.bold};
   line-height: ${theme.lineHeights.sm};
 `
+
+export const StyledIcon = styled(Icon)``
